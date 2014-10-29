@@ -1,0 +1,148 @@
+/* only 3X3 elements to style!
+* (html, body, head) * (:before, :after);
+*
+**/
+html:after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 2.5px;
+  background-color: white;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) translateZ(0.3px); }
+
+
+body, body:before, body:after {
+  filter: blur(3px); }
+
+head, body {
+  margin: 0;
+  padding: 0; }
+
+html {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  perspective: 1px;
+  background-image: url('images/bg-pattern.png'); }
+  html:before {
+    content: "";
+    position: fixed;
+    border: 2px solid hotpink;
+    width: 100px;
+    height: 100px;
+    top: 300px;
+    left: 400px;
+    transform-style: preserve-3d;
+    animation-name: zoom;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    background: white; }
+  html:after {
+    animation-name: fly-past-0;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    background: white; }
+  html * {
+    transform-style: preserve-3d;
+    position: absolute;
+    display: block; }
+
+/* 
+* Background elements
+*
+**/
+head {
+  top: 300px;
+  left: 400px;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  transform: translateZ(-0.4px);
+  border: 1px solid firebrick; }
+  head:before {
+    content: "";
+    position: fixed;
+    border: 2px solid firebrick;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transform: translateZ(-0.3px); }
+  head:after {
+    content: "";
+    position: fixed;
+    border: 2px solid firebrick;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transform: translateZ(0.3px); }
+
+/* 
+* Foreground elements
+*
+**/
+body {
+  top: 300px;
+  left: 400px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid green;
+  transform: translateZ(0.5px); }
+  body:before {
+    content: "";
+    position: fixed;
+    border: 2px solid darkgreen;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transform: translateZ(-0.3px); }
+  body:after {
+    content: "";
+    position: fixed;
+    border: 2px solid lightgreen;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transform: translateZ(0.3px); }
+
+/* Standard syntax */
+@keyframes zoom {
+  0% {
+    transform: translateZ(-0.7px); }
+
+  20% {
+    transform: translateZ(-0.4px); }
+
+  40% {
+    transform: translateZ(-0.1px); }
+
+  60% {
+    transform: translateZ(0.2px); }
+
+  80% {
+    transform: translateZ(0.5px); }
+
+  100% {
+    transform: translateZ(0.8px); } }
+
+@keyframes fly-past-0 {
+  0% {
+    transform: translateZ(-1px);
+    opacity: 0; }
+
+  70% {
+    opacity: 1;
+    transform: translateZ(0px); }
+
+  100% {
+    transform: translateZ(1px);
+    top: 59%; } }

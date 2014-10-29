@@ -1,0 +1,6 @@
+syntax: glob
+node_modules/**
+raksts/**
+New Text Document.txt
+atzinas.txt
+grunt.lnk
