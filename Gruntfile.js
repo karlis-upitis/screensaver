@@ -31,6 +31,14 @@ module.exports = function(grunt) {
 
         /*COMPILE SASS*/
         sass: {
+            options: {
+                includePaths: [
+                  require('node-bourbon').includePaths,
+                  'node_modules/node-neat/assets/stylesheets',
+                  '../views/blocks'
+                ],
+                sourceComments: 'normal'
+            },
             dev: {
                 files: {
                     'scss/style-unprefixed.css': 'scss/style.scss'

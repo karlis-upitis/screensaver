@@ -5,6 +5,8 @@
     "load-grunt-tasks": "~0.3.0",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-autoprefixer": "~0.7.3",
-    "grunt-sass": "~0.12.1"
+    "grunt-sass": "~0.12.1",
+    "node-bourbon": "~1.2.3",
+    "node-neat": "~1.4.2"
   }
 }

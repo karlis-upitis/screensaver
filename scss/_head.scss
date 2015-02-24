@@ -1,0 +1,28 @@
+head{
+	position: relative;
+	display: block;
+	// color:black;
+	&:before{
+		//YOUR IMAGINATION GOES HERE
+	}
+	&:after{
+		@include card(1);
+		box-sizing: border-box;
+		position: absolute;
+		display: block;
+		top:50%;
+		left:50%;
+		transform: translate(-50%,-50%)
+		width: 555px;
+		padding: 20px;
+		top:200px;
+		clear:left;
+
+		background-color: white;		
+		content:"Emotional intelligence (EI) is the ability to monitor one's own and other people's emotions, to discriminate between different emotions and label them appropriately, and to use emotional information to guide thinking and behavior.";
+		// content: "\2192 \2192 \2192";
+		line-height: 1.225em;
+		z-index: 100;
+	}
+
+}

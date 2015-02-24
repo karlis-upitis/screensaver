@@ -1,4 +1,7 @@
-screensaver
+no source
 ===========
 
-Old MS Windows CSS only screensavers with no source code.
+I beleive that limitations are the couse of creativity and quality.
+
+Challenge:
+Make something worth a look - using css. 

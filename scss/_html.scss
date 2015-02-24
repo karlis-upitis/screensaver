@@ -1,0 +1,42 @@
+* {
+  transform-style:preserve-3d;
+}
+
+html {
+	//styles that apply to website
+	font-size: 16px;
+	font-family: arial,​sans-serif;
+	// transform: all 0.2s ease-in 0s;
+	
+	//element styles
+	position: relative;
+	background-color: $color__bg;
+	box-sizing:border-box;
+
+	//hover styles?
+	//using cascade
+
+	&:before{
+		//YOUR IMAGINATION GOES HERE
+		// content:"";
+		// display: block;
+		// position: absolute;
+		// right:100%;
+		// width:50px;
+		// height:50px;
+		// top:200px;
+		// background-color: wheat;
+	}
+	&:after{
+		//YOUR IMAGINATION GOES HERE
+		// content:"ss";
+		// display: block;
+		// position: absolute;
+		// left:100%;
+		// width:50px;
+		// height:50px;
+		// top:220px;
+		// background-color: firebrick;
+	}
+	
+}
